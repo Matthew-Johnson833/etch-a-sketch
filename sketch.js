@@ -5,12 +5,14 @@ const gridDiv = document.createElement('div');
 
 let clearBtn = document.querySelector('.clearBtn');
 let changeGridSizeBtn = document.querySelector('.changeGridSizeBtn');
+let totalSize = 600;
 //buttons.classList.add('buttons');
 
 gridDiv.classList.add('gridDiv');
 container.appendChild(gridDiv);
 let gridSizeVariable = document.getElementsByName("gridSizeSelect")[0].value;
-
+gridDiv.style.height = totalSize + "px";
+gridDiv.style.width = totalSize + "px";
 
 // Design Change --> Create all necessary buttons in html, select and modify them as necessary here
 // create the Clear button and make it functional
@@ -30,7 +32,9 @@ function generateDivs() {
             let cell = document.createElement("div"); // every time x increments, create a new cell within the row i
             cell.classList.add("gridSquare");
             cell.addEventListener('mouseover', changeColor); // create eventListener for each cell
-            //cell.innerText = (i * gridSize) + x; // remove, this is a counter for how many cells created
+            cell.style.width = (totalSize / gridSizeVariable) + "px";
+            cell.style.height = (totalSize / gridSizeVariable) + "px";
+            // math functions to have a variable cell height/width vary depending on how many cells are created.
             row.appendChild(cell); // add to the row
         }
         gridDiv.appendChild(row); // add the completed row to the container
