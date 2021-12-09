@@ -21,7 +21,8 @@ changeGridSizeBtn.addEventListener('click', changeGridSize);
 // This Javascript will create a grid of divs and will allow a user to draw in it with different colors
 function generateDivs() {
     let selectGrid = document.querySelector(".gridDiv");
-    
+    let gridSizeVariable = document.getElementsByName("gridSizeSelect")[0].value;
+
     for (let i = 0; i < gridSizeVariable; i++) {
         let row = document.createElement('div'); // every time i increments, create a new div called row
         row.classList.add("row");
