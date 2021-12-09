@@ -1,14 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap');
+
+:root {
+    --aero-blue: #D5FFFC;
+    --teal-blue: #4E8098;
+    --cameo-pink: #DBB1BC;
+    --hot-pink: #FF47DA;
+}
+
+body {
+    background-color: var(--aero-blue);
+}
+
+header h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-size: 48px;
+    color: var(--hot-pink);
+}
+
 #container {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    gap: 50px;
 } .row {
     display: flex;
+} .gridDiv { /* need to force the grid to stay the same size, regardless of density
+    border: 2px solid black;*/
+    height: 50vw;
+    width: 50vw;
 } .gridSquare {
     display: flex;
     height: 50px;
     width: 50px;
-    border: 2px solid black;
+    /*border: 2px solid black; */
     justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+} .clearBtn {
+    padding: 20px;
+    background-color: aquamarine;
+    border: 3px solid black;
+    border-radius: 15px;
+    font-family: 'Fuzzy Bubbles', cursive;
+} .clearBtn:hover {
+    cursor: grab;
+} 
+
+#sizeSelection {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 250px;
+} #sizeSelection input {
+    height: 35px;
+    width: 50px;
+}
+
+.gridDiv {
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }

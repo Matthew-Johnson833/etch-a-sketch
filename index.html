@@ -5,12 +5,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Etch-a-Sketch</title>
     <link rel="stylesheet" href="etchASketch.css">
 </head>
 
 <body>
+    <header>
+        <h2>Etch-a-Sketch</h2>
+    </header>
     <div id="container">
+        <div class="controls">
+            <button class="clearBtn">Clear</button>
+            <div id="sizeSelection">
+                <label for="gridSizeSelect">Select your Grid Size:</label>
+                <input type="number" id="gridSizeSelect" name="gridSizeSelect" min="1" max="100" value="16">
+                <button class="changeGridSizeBtn">Change Size</button>
+            </div>
+        </div>
 
     </div>
 </body>
